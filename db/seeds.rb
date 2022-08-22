@@ -8,6 +8,9 @@
 
 puts "Seeding data..."
  10.times do 
-    Student.create(name: faker.name, email: faker.internet.email(), phone_no: faker.phone.number('07-##-###-###'))
+    Student.create(name: Faker::Name.name, email: Faker::Internet.email, phone_no: Faker::Number.number(10))
+
+    Schedule.create(title: Faker::Company.catch_phrase, date: Faker::Date.forward(60), time: Faker::Time.forward(23), meeting_link: Faker::Internet.url, description: Faker::Lorem.paragraph)
  end
+
 puts "Done seeding."
