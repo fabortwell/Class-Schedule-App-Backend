@@ -20,7 +20,7 @@ class TechnicalMentorsController < ApplicationController
             technical_mentor.update(technical_mentor_params)
             render json: technical_mentor
         else 
-            render {error: "TechnicalMentor not found" }, status: :not_found
+            render {error: "Technical Mentor not found" }, status: :not_found
         end
     end
 
