@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources :schedules
   resources :technical_mentors
   resources :students, only: [:create, :show]
 
