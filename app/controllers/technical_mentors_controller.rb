@@ -24,9 +24,15 @@ class TechnicalMentorsController < ApplicationController
         end
     end
 
-
-
-    
+    def destroy
+        technical_mentor = TechnicalMentor.find_by(id: params[:id])
+        if technical_mentor
+            technical_mentor.destroy
+            head :no_content
+        else
+            render json: { error: "Technical Mentor not found"}, status: :not_found 
+        end
+    end
 
 
     private
