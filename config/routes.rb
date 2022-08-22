@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :announcements
   resources :technical_mentors
   resources :students, only: [:create, :show]
 
