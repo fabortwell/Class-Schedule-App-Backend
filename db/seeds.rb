@@ -6,14 +6,19 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Comment.destroy_all
 
 
 
-puts "🌱 Seeding comments..."
+puts "🌱 Seeding data..."
 
-comment_1 = Comment.create(student_id: 1, content: "Quite informative info" , likes: 0, schedule_id: 1)
-comment_2 = Comment.create(student_id: 2, content: "Yay! exactly what I wanted to hear" , likes: 0, schedule_id: 2)
-comment_3 = Comment.create(student_id: 3, content: "Informative piece" , likes: 0, schedule_id: 3)
+Comment.create!(content: "Quite informative info", likes: 0)
+Comment.create!(content: "Yay! exactly what I wanted to hear", likes: 0)
+Comment.create!(content: "Informative piece", likes: 0)
+Comment.create!(content: "Thanks for informing us", likes: 1)
+Comment.create!(content: "Great information!", likes: 0)
+Comment.create!(content: "Cool stuff", likes: 3)
+Comment.create!(content: "What next?", likes: 5)
+Comment.create!(content: "Kindly clarify", likes: 5)
+Comment.create!(content: "yay!", likes: 13)
 	
 puts "✅ Done seeding!"

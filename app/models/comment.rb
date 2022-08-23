@@ -1,7 +1,7 @@
 class Comment < ApplicationRecord
     #Associations
-    belongs_to :student
-    belongs_to :schedule
+    belongs_to :student, optional: true
+    belongs_to :schedule, optional: true
 
     #validations 
     validates :content, presence: true 
