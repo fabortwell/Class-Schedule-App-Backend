@@ -11,6 +11,8 @@ puts "Seeding data..."
     Student.create(name: Faker::Name.name, email: Faker::Internet.email, phone_no: Faker::Number.number(10))
 
     Schedule.create(title: Faker::Company.catch_phrase, date: Faker::Date.forward(60), time: Faker::Time.forward(23), meeting_link: Faker::Internet.url, description: Faker::Lorem.paragraph)
+
+    Announcement.create(title: Faker::Company.bs, description: Faker::Lorem.paragraph)
  end
 
 puts "Done seeding."

@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
+
     def create
-        student = Student.create(student_params)
+        student = Student.create!(student_params)
         if student.valid?
             session[:student_id] = student.id
             render json: student, status: :created
@@ -10,7 +11,8 @@ class StudentsController < ApplicationController
     end
 
     def show
-        render json: @current_student
+        @current_user = User.find_by(id: session[:user_id])
+        render json: @current_user
     end
 
     private
