@@ -5,8 +5,7 @@ class CreateComments < ActiveRecord::Migration[7.0]
       t.belongs_to :student, null: false, foreign_key: true
       t.belongs_to :schedule, null: false, foreign_key: true
       t.integer :likes
-
-      
+ 
       t.timestamps
     end
   end

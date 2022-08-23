@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Comment.destroy_all
+
+
+
+puts "🌱 Seeding comments..."
+
+comment_1 = Comment.create(student_id: 1, content: "Quite informative info" , likes: 0, schedule_id: 1)
+comment_2 = Comment.create(student_id: 2, content: "Yay! exactly what I wanted to hear" , likes: 0, schedule_id: 2)
+comment_3 = Comment.create(student_id: 3, content: "Informative piece" , likes: 0, schedule_id: 3)
+	
+puts "✅ Done seeding!"
