@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :schedules
   resources :technical_mentors
-  resources :students, only: [:create, :show]
+  resources :students, only: [:index, :create, :show]
   
   #LOGIN/LOGOUT STUDENT
   post '/login_student', to: 'student_session#create'

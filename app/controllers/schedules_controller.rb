@@ -22,7 +22,8 @@ class SchedulesController < ApplicationController
 
     def destroy
         schedule = Schedule.find(params[:id])
-        schedule.destroy, head: :no_content
+        schedule.destroy
+        render json: schedule
     end
 
     private

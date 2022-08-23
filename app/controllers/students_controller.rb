@@ -1,5 +1,9 @@
 class StudentsController < ApplicationController
 
+    def index
+        render json: Student.all
+    end
+
     def create
         student = Student.create!(student_params)
         if student.valid?
