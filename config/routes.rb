@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :announcements
-
   resources :schedules
   resources :technical_mentors
 

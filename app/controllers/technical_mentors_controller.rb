@@ -38,6 +38,6 @@ class TechnicalMentorsController < ApplicationController
     private
 
     def technical_mentor_params
-        params.permit(:name, :password, :email, :phone_no)
+        params.permit(:name, :password, :password_confirmation, :email, :phone_no)
     end
 end
