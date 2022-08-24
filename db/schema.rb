@@ -16,10 +16,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_24_103822) do
 
   create_table "announcements", force: :cascade do |t|
     t.string "title"
+    t.string "description"
+    t.integer "technical_mentor_id"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "technical_mentor_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.integer "likes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "schedules", force: :cascade do |t|
@@ -45,7 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_24_103822) do
     t.string "name"
     t.string "password_digest"
     t.string "email"
-    t.integer "phone_no"
+    t.integer "phone_no", :limit=>8
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
