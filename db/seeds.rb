@@ -3,10 +3,5 @@
 require 'faker'
 
 puts "Seeding data ..."
-name = Faker::Name.unique.name
-password = Faker::Alphanumeric.alphanumeric(number: 10)
-email = Faker::Internet.email
-phone_no = Faker::Number.number(no)
-TechnicalMentor.create(name: name, password: password, email: email, phone_no: phone_no )
-
+TechnicalMentor.create!(name: Faker::Name.name, email: Faker::Internet.email, phone_no: Faker::Number.number(digits: 10) )
 puts "Done seeding!"
