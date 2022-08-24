@@ -22,6 +22,12 @@ gem 'bcrypt'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
+#Use bcrypt to hash passswords
+gem 'bcrypt', '~> 3.1', '>= 3.1.18'
+
+# Use active_model_serializer to serialize endered data
+gem 'active_model_serializers', '~> 0.10.0'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 

@@ -171,8 +171,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  active_model_serializers
-  bcrypt
+  active_model_serializers (~> 0.10.0)
+  bcrypt (~> 3.1, >= 3.1.18)
   debug
   faker (~> 1.6, >= 1.6.6)
   pg (~> 1.1)
