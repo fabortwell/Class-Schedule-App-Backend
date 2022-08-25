@@ -1,7 +1,12 @@
 class TechnicalMentorsController < ApplicationController 
 
+    def index
+        technical_mentors = TechnicalMentor.all
+        render json: technical_mentors
+    end
+
     def create
-        technical_mentor = TechnicalMentor.create(technical_mentor_params)
+        technical_mentor = TechnicalMentor.create!(technical_mentor_params)
          if technical_mentor.valid?
             session[:technical_mentor_id] = technical_mentor.id
             render json: technical_mentor, status: :created
@@ -17,10 +22,10 @@ class TechnicalMentorsController < ApplicationController
     def update
         technical_mentor = TechnicalMentor.find(params[:id])
         if technical_mentor
-            technical_mentor.update(technical_mentor_params)
+            technical_mentor.update!(technical_mentor_params)
             render json: technical_mentor
         else 
-            render {error: "Technical Mentor not found" }, status: :not_found
+            render json: {error: "Technical Mentor not found" }, status: :not_found
         end
     end
 

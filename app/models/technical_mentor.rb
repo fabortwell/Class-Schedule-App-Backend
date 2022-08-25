@@ -1,7 +1,9 @@
 class TechnicalMentor < ApplicationRecord
-    has_many: schedules
-    has_many: students, through: :schedules
-    has_many: announcements
+    has_secure_password
+
+    has_many :schedules
+    has_many :students, through: :schedules
+    has_many :announcements
     validates :name, :email, :password, :password_confirmation, :phone_no, presence: true
     validates :email, uniqueness: true
     validates :password, length: { minimum: 6 }
