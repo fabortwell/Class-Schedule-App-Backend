@@ -12,18 +12,9 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.4.3"
 
-gem 'active_model_serializers'
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
-#use serializer
-gem 'active_model_serializers'
-
-#use faker 
-gem 'faker'
-#use bcrypt
-gem 'bcrypt'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
