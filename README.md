@@ -11,7 +11,7 @@ The project was developed by @kenyansa, @fabortwell, and @Mukundi-mbugi
 This is a scheudling app that allows the admin to assign students classes. The admin creates login creadentials for the students and classes, and can post announcements on the platform. Students on the other hand can comment on the classses, update their profile settings, etc.
 
 ## :pushpin: Installation Requirements
-- If you'd like to contribute to this project, you may first clone the repo (https://github.com/kenyansa/Class-Schedule-App-Backend.git.
+- If you'd like to contribute to this project, you may first clone the repo (https://github.com/kenyansa/Class-Schedule-App-Backend.git).
 - After cloning, install dependancies by running <b>bundle install</b>
 - start server by running <b>rails s</b>
 - Create a new branch using <b>git checkout -b <branch name>
