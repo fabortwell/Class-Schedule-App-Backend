@@ -14,7 +14,7 @@ This is a scheudling app that allows the admin to assign students classes. The a
 - If you'd like to contribute to this project, you may first clone the repo (https://github.com/kenyansa/Class-Schedule-App-Backend.git).
 - After cloning, install dependancies by running <b>bundle install</b>
 - start server by running <b>rails s</b>
-- Create a new branch using <b>git checkout -b <branch name></b>
+- Create a new branch using <b>git checkout -b (branch name) </b>
 - Push the changes to the created branch for review and merging
 ## Known Bugs
 There are no known bugs.
