@@ -30,9 +30,9 @@ Comment.create!(content: "yay!", likes: 13)
  10.times do 
    #  Student.create(name: Faker::Name.name, email: Faker::Internet.email, phone_no: Faker::Number.number(10))
 
-    Schedule.create(title: Faker::Company.catch_phrase, date: Faker::Date.forward(60), time: Faker::Time.forward(23), meeting_link: Faker::Internet.url, description: Faker::Lorem.paragraph)
+    Schedule.create!(title: Faker::Company.catch_phrase, date: Faker::Date.forward(60), time: Faker::Time.forward(23), meeting_link: Faker::Internet.url, description: Faker::Lorem.paragraph)
 
-    Announcement.create(title: Faker::Company.bs, description: Faker::Lorem.paragraph)
+    Announcement.create!(title: "Feedback Session", description: "Now is the time to make real the promises of democracy. Now is the time to rise from the dark and desolate valley of segregation to the sunlit path of racial justice. Now is the time to lift our nation from the quick sands of racial injustice to the solid rock of brotherhood. Now is the time to make justice a reality for all of God's children.", technical_mentor_id: 1)
  end
 
 puts "✅ Done seeding!"

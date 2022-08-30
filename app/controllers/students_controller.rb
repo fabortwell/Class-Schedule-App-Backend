@@ -6,7 +6,12 @@ class StudentsController < ApplicationController
     end
     
     def show
-     render json: @student
+        student = Student.find_by(id: params[:id])
+        if student
+            render json: student 
+        else
+            render json: { error: "student not found" }, status: :not_found
+        end
    end
 
     def create
@@ -19,6 +24,6 @@ class StudentsController < ApplicationController
     private
 
     def student_params
-        params.permit(:name, :email, :password, :password_confirmation, :phone_no)
+        params.permit(:name, :email, :password, :password_confirmation, :phone_no, :avatar)
     end
 end
