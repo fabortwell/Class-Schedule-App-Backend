@@ -3,9 +3,11 @@
 require 'faker'
 
 puts "Seeding data ..."
-TechnicalMentor.create!(name: Faker::Name.name, email: Faker::Internet.email, phone_no: Faker::Number.number(digits: 10) )
+TechnicalMentor.create!(name: Faker::Name.name, password: "12345678", password_confirmation: "12345678", email: Faker::Internet.email, phone_no: Faker::Number.number(digits = 10) )
+Student.create!(name: Faker::Name.name, password: "12345678", password_confirmation: "12345678", email: Faker::Internet.email, phone_no: Faker::Number.number(digits = 10) )
 puts "Done seeding!"
-=======
+
+
 #
 # Examples:
 #
@@ -26,7 +28,7 @@ Comment.create!(content: "Kindly clarify", likes: 5)
 Comment.create!(content: "yay!", likes: 13)
 
  10.times do 
-    Student.create(name: Faker::Name.name, email: Faker::Internet.email, phone_no: Faker::Number.number(10))
+   #  Student.create(name: Faker::Name.name, email: Faker::Internet.email, phone_no: Faker::Number.number(10))
 
     Schedule.create(title: Faker::Company.catch_phrase, date: Faker::Date.forward(60), time: Faker::Time.forward(23), meeting_link: Faker::Internet.url, description: Faker::Lorem.paragraph)
 

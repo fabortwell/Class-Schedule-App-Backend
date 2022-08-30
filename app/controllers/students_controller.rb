@@ -1,8 +1,13 @@
 class StudentsController < ApplicationController
 
     def index
-        render json: Student.all
+        students = Student.all
+        render json: students
     end
+    
+    def show
+     render json: @student
+   end
 
     def create
         student = Student.create!(student_params)
