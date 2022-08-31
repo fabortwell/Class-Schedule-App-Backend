@@ -4,6 +4,195 @@ info:
   title: API V1
   version: v1
 paths:
+  "/announcements":
+    get:
+      summary: list announcements
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create announcement
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                technical_mentor_id:
+                  type: integer
+              required:
+              - title
+              - description
+              - technical_mentor_id
+  "/announcements/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show announcement
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update announcement
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                technical_mentor_id:
+                  type: integer
+              required:
+              - title
+              - description
+              - technical_mentor_id
+    put:
+      summary: update announcement
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                technical_mentor_id:
+                  type: integer
+              required:
+              - title
+              - description
+              - technical_mentor_id
+    delete:
+      summary: delete announcement
+      responses:
+        '200':
+          description: successful
+  "/comments":
+    get:
+      summary: list comments
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create comment
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+                likes:
+                  type: integer
+                schedule_id:
+                  type: integer
+                announcement_id:
+                  type: integer
+              required:
+              - content
+              - likes
+              - schedule_id
+              - announcement_id
+  "/comments/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show comment
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update comment
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+                likes:
+                  type: integer
+                schedule_id:
+                  type: integer
+                announcement_id:
+                  type: integer
+              required:
+              - content
+              - likes
+              - schedule_id
+              - announcement_id
+    put:
+      summary: update comment
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+                likes:
+                  type: integer
+                schedule_id:
+                  type: integer
+                announcement_id:
+                  type: integer
+              required:
+              - content
+              - likes
+              - schedule_id
+              - announcement_id
+    delete:
+      summary: delete comment
+      responses:
+        '200':
+          description: successful
   "/schedules":
     get:
       summary: list schedules
@@ -109,6 +298,176 @@ paths:
               - description
     delete:
       summary: delete schedule
+      responses:
+        '200':
+          description: successful
+  "/students":
+    get:
+      summary: list students
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create student
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                password_digest:
+                  type: string
+                email:
+                  type: string
+                phone_no:
+                  type: string
+                avatar:
+                  type: string
+              required:
+              - name
+              - password_digest
+              - email
+              - phone_no
+              - avatar
+  "/students/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show student
+      responses:
+        '200':
+          description: successful
+  "/technical_mentors":
+    get:
+      summary: list technical_mentors
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create technical_mentor
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                password_digest:
+                  type: string
+                email:
+                  type: string
+                phone_no:
+                  type: integer
+              required:
+              - name
+              - password_digest
+              - email
+              - email
+              - phone_no
+  "/technical_mentors/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show technical_mentor
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                password_digest:
+                  type: string
+                email:
+                  type: string
+                phone_no:
+                  type: integer
+              required:
+              - name
+              - password_digest
+              - email
+              - email
+              - phone_no
+    patch:
+      summary: update technical_mentor
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                password_digest:
+                  type: string
+                email:
+                  type: string
+                phone_no:
+                  type: integer
+              required:
+              - name
+              - password_digest
+              - email
+              - email
+              - phone_no
+    put:
+      summary: update technical_mentor
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                password_digest:
+                  type: string
+                email:
+                  type: string
+                phone_no:
+                  type: integer
+              required:
+              - name
+              - password_digest
+              - email
+              - email
+              - phone_no
+    delete:
+      summary: delete technical_mentor
       responses:
         '200':
           description: successful

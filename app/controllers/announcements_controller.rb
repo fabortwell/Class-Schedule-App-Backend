@@ -8,7 +8,7 @@ class AnnouncementsController < ApplicationController
         if announcement
             render json: announcement 
         else
-            render json: { error: "announcement not found" }, status: :not_found
+            render json: { error: "announcement not found, try again" }, status: :not_found
         end
     end
 
