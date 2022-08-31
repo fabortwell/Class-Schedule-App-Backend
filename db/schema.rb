@@ -33,7 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_184839) do
 
   create_table "schedules", force: :cascade do |t|
     t.string "title"
-    t.date "date"
+    t.date "string"
     t.string "time"
     t.string "meeting_link"
     t.string "description"

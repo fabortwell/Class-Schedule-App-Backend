@@ -25,7 +25,7 @@ RSpec.describe 'schedules', type: :request do
           type: :object,          
           properties: {                        
             title: { type: :string },            
-            date: { type: :date },  
+            date: { type: :string },  
             time: { type: :string }, 
             meeting_link: { type: :string },
             description: { type: :string }          
@@ -72,7 +72,7 @@ RSpec.describe 'schedules', type: :request do
           type: :object,          
           properties: {                        
             title: { type: :string },            
-            date: { type: :date },  
+            date: { type: :string },  
             time: { type: :string }, 
             meeting_link: { type: :string },
             description: { type: :string }          
@@ -99,7 +99,7 @@ RSpec.describe 'schedules', type: :request do
           type: :object,          
           properties: {                        
             title: { type: :string },            
-            date: { type: :date },  
+            date: { type: :string },  
             time: { type: :string }, 
             meeting_link: { type: :string },
             description: { type: :string }          
