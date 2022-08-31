@@ -1,0 +1,119 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/schedules":
+    get:
+      summary: list schedules
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create schedule
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                date:
+                  type: date
+                time:
+                  type: string
+                meeting_link:
+                  type: string
+                description:
+                  type: string
+              required:
+              - title
+              - date
+              - time
+              - meeting_link
+              - description
+  "/schedules/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show schedule
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update schedule
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                date:
+                  type: date
+                time:
+                  type: string
+                meeting_link:
+                  type: string
+                description:
+                  type: string
+              required:
+              - title
+              - date
+              - time
+              - meeting_link
+              - description
+    put:
+      summary: update schedule
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                date:
+                  type: date
+                time:
+                  type: string
+                meeting_link:
+                  type: string
+                description:
+                  type: string
+              required:
+              - title
+              - date
+              - time
+              - meeting_link
+              - description
+    delete:
+      summary: delete schedule
+      responses:
+        '200':
+          description: successful
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: https://ratibar-backend.herokuapp.com
