@@ -71,6 +71,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     bcrypt (3.1.18)
     builder (3.2.4)
     case_transform (0.2)
@@ -92,8 +94,10 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
+    json-schema (2.8.1)
+      addressable (>= 2.4)
     jsonapi-renderer (0.2.2)
-    jwt (2.4.1)
+    jwt (2.5.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -102,7 +106,6 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
     minitest (5.16.3)
     net-imap (0.2.3)
       digest
@@ -119,15 +122,11 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.8)
-      mini_portile2 (~> 2.8.0)
-      racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.3)
-    puma (5.6.4)
+    public_suffix (5.0.0)
+    puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
@@ -181,7 +180,18 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    rswag (2.5.1)
+      rswag-api (= 2.5.1)
+      rswag-specs (= 2.5.1)
+      rswag-ui (= 2.5.1)
     rswag-api (2.5.1)
+      railties (>= 3.1, < 7.1)
+    rswag-specs (2.5.1)
+      activesupport (>= 3.1, < 7.1)
+      json-schema (~> 2.2)
+      railties (>= 3.1, < 7.1)
+    rswag-ui (2.5.1)
+      actionpack (>= 3.1, < 7.1)
       railties (>= 3.1, < 7.1)
     strscan (3.0.4)
     thor (1.2.1)
@@ -194,8 +204,6 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-  ruby
-  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
@@ -210,13 +218,10 @@ DEPENDENCIES
   rails (~> 7.0.3, >= 7.0.3.1)
   rspec-rails
   rswag
-  rswag-api
-  rswag-ui
-
   tzinfo-data
 
 RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.3.15
+   2.3.19
