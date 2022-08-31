@@ -1,5 +1,4 @@
 class CommentSerializer < ActiveModel::Serializer
-  attributes :id, :content, :likes, :student
+  attributes :id, :content, :likes, :student, :schedule_id, :announcement_id
   has_one :student
-  has_one :schedule
 end
