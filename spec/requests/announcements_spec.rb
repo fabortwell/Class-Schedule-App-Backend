@@ -20,6 +20,17 @@ RSpec.describe 'announcements', type: :request do
 
     post('create announcement') do
       response(200, 'successful') do
+        consumes 'application/json'        
+        parameter name: :announcement, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            title: { type: :string },            
+            description: { type: :string },  
+            technical_mentor_id: { type: :integer }         
+          },          
+          required: %w[title description technical_mentor_id]  
+        }
+
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -55,6 +66,16 @@ RSpec.describe 'announcements', type: :request do
     patch('update announcement') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'        
+        parameter name: :announcement, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            title: { type: :string },            
+            description: { type: :string },  
+            technical_mentor_id: { type: :integer }         
+          },          
+          required: %w[title description technical_mentor_id]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -70,6 +91,16 @@ RSpec.describe 'announcements', type: :request do
     put('update announcement') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'        
+        parameter name: :announcement, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            title: { type: :string },            
+            description: { type: :string },  
+            technical_mentor_id: { type: :integer }         
+          },          
+          required: %w[title description technical_mentor_id]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {

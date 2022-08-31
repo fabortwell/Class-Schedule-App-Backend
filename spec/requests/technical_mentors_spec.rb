@@ -20,6 +20,17 @@ RSpec.describe 'technical_mentors', type: :request do
 
     post('create technical_mentor') do
       response(200, 'successful') do
+        consumes 'application/json'        
+        parameter name: :technical_mentor, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            name: { type: :string },            
+            password_digest: { type: :string },  
+            email: { type: :string }, 
+            phone_no: { type: :integer }         
+          },          
+          required: %w[name password_digest email email phone_no]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -40,6 +51,17 @@ RSpec.describe 'technical_mentors', type: :request do
     get('show technical_mentor') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'        
+        parameter name: :technical_mentor, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            name: { type: :string },            
+            password_digest: { type: :string },  
+            email: { type: :string }, 
+            phone_no: { type: :integer }         
+          },          
+          required: %w[name password_digest email email phone_no]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -55,6 +77,17 @@ RSpec.describe 'technical_mentors', type: :request do
     patch('update technical_mentor') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'        
+        parameter name: :technical_mentor, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            name: { type: :string },            
+            password_digest: { type: :string },  
+            email: { type: :string }, 
+            phone_no: { type: :integer }         
+          },          
+          required: %w[name password_digest email email phone_no]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -70,6 +103,17 @@ RSpec.describe 'technical_mentors', type: :request do
     put('update technical_mentor') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'        
+        parameter name: :technical_mentor, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            name: { type: :string },            
+            password_digest: { type: :string },  
+            email: { type: :string }, 
+            phone_no: { type: :integer }         
+          },          
+          required: %w[name password_digest email email phone_no]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {

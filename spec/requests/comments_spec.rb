@@ -20,6 +20,17 @@ RSpec.describe 'comments', type: :request do
 
     post('create comment') do
       response(200, 'successful') do
+        consumes 'application/json'        
+        parameter name: :comment, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            content: { type: :string },            
+            likes: { type: :integer },  
+            schedule_id: { type: :integer },
+            announcement_id: { type: :integer }         
+          },          
+          required: %w[content likes schedule_id announcement_id]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -55,6 +66,17 @@ RSpec.describe 'comments', type: :request do
     patch('update comment') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'        
+        parameter name: :comment, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            content: { type: :string },            
+            likes: { type: :integer },  
+            schedule_id: { type: :integer },
+            announcement_id: { type: :integer }         
+          },          
+          required: %w[content likes schedule_id announcement_id]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -70,6 +92,17 @@ RSpec.describe 'comments', type: :request do
     put('update comment') do
       response(200, 'successful') do
         let(:id) { '123' }
+        consumes 'application/json'        
+        parameter name: :comment, in: :body, schema: {         
+          type: :object,          
+          properties: {                        
+            content: { type: :string },            
+            likes: { type: :integer },  
+            schedule_id: { type: :integer },
+            announcement_id: { type: :integer }         
+          },          
+          required: %w[content likes schedule_id announcement_id]  
+        }
 
         after do |example|
           example.metadata[:response][:content] = {
