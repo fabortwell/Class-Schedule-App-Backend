@@ -102,6 +102,7 @@ RSpec.describe 'comments', type: :request do
             announcement_id: { type: :integer }         
           },          
           required: %w[content likes schedule_id announcement_id]  
+          # this line works as  serializer
         }
 
         after do |example|
