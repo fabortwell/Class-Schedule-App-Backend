@@ -473,7 +473,7 @@ paths:
           description: successful
 servers:
 - url: https://ratibar-backend.herokuapp.com/
-# without duplicate  https:// thing
+# without duplicating  https:// thing
   variables:
     defaultHost:
       default: https://ratibar-backend.herokuapp.com/
