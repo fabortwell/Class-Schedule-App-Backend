@@ -4,10 +4,9 @@ Rails.application.routes.draw do
   resources :announcements
   resources :schedules
   resources :technical_mentors
-
   resources :students, only: [:index, :create, :show]
-
   resources :comments
+  resources :search, only: [:index] 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
   #LOGIN/LOGOUT STUDENT
