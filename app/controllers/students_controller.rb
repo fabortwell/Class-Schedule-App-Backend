@@ -21,6 +21,16 @@ class StudentsController < ApplicationController
         render json: {token: token}
     end
 
+    def update
+        student = Student.find(params[:id])
+        if student 
+            student.update!(student_params)
+            render json: student
+        else 
+            render json: {error: "Student not found" }, status: :not_found
+        end
+    end
+
     private
 
     def student_params
