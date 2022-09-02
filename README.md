@@ -4,7 +4,7 @@ This app is an automated system that can centralize the information entered into
 
 #### The frontend GitHub repo and hosted link: <br>
 https://github.com/LarmBee/Class-Schedule-App ><br>
-class-schedule-app.vercel.app 
+https://class-schedule-app.vercel.app/
 
 <!-- ## Screeshots
 ![Description part of the web-app](web-app_1.png)
