@@ -2,7 +2,7 @@
 ### version 1.0.0
 This app is an automated system that can centralize the information entered into so that a user can browse through the respective module in the course catalog of the App and find the classes/ schedules, for example, a <b>Resourcefulness Workshop</b> with day, time and the necessary info such as the Invitation links, a brief description of the schedule and more. The user will also be able to comment on the assigned schedules
 
-####The frontend GitHub repo and hosted link: <br>
+#### The frontend GitHub repo and hosted link: <br>
 https://github.com/LarmBee/Class-Schedule-App ><br>
 class-schedule-app.vercel.app 
 
